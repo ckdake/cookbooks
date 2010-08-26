@@ -30,6 +30,11 @@ attribute "mysql/datadir",
   :description => "Location of mysql databases",
   :default => "/var/lib/mysql"
 
+attribute "mysql/server_id",
+  :display_name => "MySQL Server ID",
+  :description => "Used in Replication, each server in a Replication hierarchy must have a unique ID",
+  :default => "1"
+
 attribute "mysql/ec2_path",
   :display_name => "MySQL EC2 Path",
   :description => "Location of mysql directory on EC2 instance EBS volumes",

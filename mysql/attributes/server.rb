@@ -24,6 +24,7 @@ set_unless[:mysql][:server_root_password] = secure_password
 set_unless[:mysql][:server_repl_password] = secure_password
 default[:mysql][:bind_address]         = ipaddress
 default[:mysql][:datadir]              = "/var/lib/mysql"
+default[:mysql][:server_id]            = 1
 
 if attribute?(:ec2)
   default[:mysql][:ec2_path]    = "/mnt/mysql"
